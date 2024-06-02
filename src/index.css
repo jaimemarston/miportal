@@ -1,0 +1,238 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
+/* src/components/CarList.css */
+.car-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .car-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 150px;
+  }
+  
+  
+  .car-image {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Animación suave */
+  }
+  
+  .car-image:hover {
+    transform: scale(1.1); /* Aumenta la imagen al 110% de su tamaño original */
+  }
+  /* src/components/Navbar.css */
+  
+  
+  
+  .navbar {
+    position: fixed;
+    margin-top: 20px; /* Ajusta según la altura de tu TopBar */
+    left: 0; /* Alineado a la izquierda */
+    top: 0;
+    height: 100%;
+    width: 60px; /* Ancho inicial para solo mostrar los iconos */
+    background-color: #333; /* Ajusta el color de fondo según tus preferencias */
+    transition: width 0.3s; /* Transición suave para el cambio de ancho */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Efecto 3D en el contenedor del navbar */
+  }
+  
+  .navbar:hover {
+    width: 200px; /* Ancho cuando el mouse se acerque */
+  }
+  
+  .nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al inicio de cada fila */
+    height: 100%;
+  }
+  
+  .nav-menu li {
+    margin: 20px 0; /* Ajusta el margen entre los elementos según tus necesidades */
+    width: 100%;
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 10px; /* Añade un poco de espacio a la izquierda */
+  }
+  
+  .nav-menu a {
+    color: white; /* Ajusta el color del texto según tus preferencias */
+    text-decoration: none;
+    font-size: 18px; /* Ajusta el tamaño del texto según tus necesidades */
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Evita que el texto se quiebre */
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0; /* Añade padding para un área de clic más grande */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  }
+  
+  .nav-menu a .icon {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+  }
+  
+  .nav-menu a span {
+    display: none; /* Esconde el texto por defecto */
+  }
+  
+  .navbar:hover .nav-menu a span {
+    display: inline; /* Muestra el texto cuando el navbar está en estado expandido */
+  }
+  
+  .nav-menu a:hover {
+    background-color: #555; /* Color de fondo al pasar el ratón */
+    transform: translateX(5px); /* Efecto de desplazamiento 3D al pasar el ratón */
+  }
+  
+  .app-content {
+    margin-top: 60px; /* Ajustar para acomodar la barra superior */
+  }
+  
+  
+  /* src/components/MainContent.css */
+  .main-content {
+    margin-top: 60px; /* Ajustar para acomodar la barra superior */
+  }
+  
+  .car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .car-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .car-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .car-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .client-info {
+    margin-top: 10px;
+  }
+  
+  .client-info p {
+    margin: 5px 0;
+  }
+  
+  .client-info strong {
+    color: #333;
+  }
+  
+  
+  
+  
+  
+  /* src/components/TopBar.css */
+  .top-bar {
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .user-icon {
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  /* src/App.css */
+  .App {
+    text-align: center;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  label {
+    margin: 10px 0 5px;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #61dafb;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #21a1f1;
+  }
+  

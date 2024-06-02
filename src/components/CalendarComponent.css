@@ -1,0 +1,38 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Letras blancas */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .react-calendar {
+    border: none;
+    background-color: #333; /* Fondo gris oscuro para el calendario */
+    color: #fff; /* Letras blancas para el calendario */
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .react-calendar__navigation button {
+    color: #fff; /* Letras blancas */
+    background: none;
+  }
+  
+  .react-calendar__tile {
+    color: #000; /* Letras negras para los días */
+    background-color: #fff; /* Fondo blanco para los días */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .react-calendar__tile--active {
+    background-color: #444; /* Fondo gris para el día activo */
+    color: #fff; /* Letras blancas para el día activo */
+  }
+  
+  .selected-date {
+    margin-top: 20px;
+  }
